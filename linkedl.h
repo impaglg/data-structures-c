@@ -12,8 +12,9 @@ typedef struct linkedl {
 linkedl_node *linkedl_node_init(int node_val);
 linkedl *linkedl_init();
 int linkedl_empty(linkedl *list);
-int linkedl_contains(linkedl *list);
+int linkedl_contains(linkedl *list, linkedl_node *compare_node);
 int linkedl_insert(linkedl *list, linkedl_node *list_node);
 linkedl_node *linkedl_remove(linkedl *list, int index);
 void linkedl_reverse(linkedl *list);
+void linkedl_show(linkedl *list);
 void linkedl_destroy(linkedl *list);
