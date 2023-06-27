@@ -1,14 +1,19 @@
-typedef struct linkedlist_node {
+typedef struct linkedl_node {
   int val;
-  struct linkedlist_node *next;
-} linkedlist_node;
+  struct linkedl_node *next;
+} linkedl_node;
 
-typedef struct linkedlist {
-  struct linkedlist_node *head;
-  struct linkedlist_node *tail;
+typedef struct linkedl {
+  struct linkedl_node *head;
+  struct linkedl_node *tail;
   int length;
-} linkedlist;
+} linkedl;
 
-linkedlist_node *linkedlist_node_init(int node_val);
-linkedlist *linkedlist_init();
-int linkedlist_destroy(linkedlist *list);
+linkedl_node *linkedl_node_init(int node_val);
+linkedl *linkedl_init();
+int linkedl_empty(linkedl *list);
+int linkedl_contains(linkedl *list);
+int linkedl_insert(linkedl *list, linkedl_node *list_node);
+linkedl_node *linkedl_remove(linkedl *list, int index);
+void linkedl_reverse(linkedl *list);
+void linkedl_destroy(linkedl *list);
