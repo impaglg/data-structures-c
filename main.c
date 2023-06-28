@@ -3,9 +3,10 @@
 
 int main(int argc, char **argv) {
   linkedl *new_list = linkedl_init();
-  int node_number;
-  printf("How many nodes do you want to insert? --> ");
-  scanf("%d\n", &node_number);
+  int node_number = 5;
+  // int node_number;
+  // printf("How many nodes do you want to insert? --> ");
+  // scanf("%d\n", &node_number);
   int node_value;
   for (int i = 0; i < node_number; i++) {
     printf("Type in the value of the node: --> ");
@@ -16,4 +17,5 @@ int main(int argc, char **argv) {
   printf("All the nodes have been successfully added!\n");
   printf("Here's the full list of nodes:\n");
   linkedl_show(new_list);
+  // linkedl_destroy(new_list);
 }
